@@ -1,0 +1,3 @@
+author: maria colon 
+date: 5/24/24
+separated the css and created the log doc 
