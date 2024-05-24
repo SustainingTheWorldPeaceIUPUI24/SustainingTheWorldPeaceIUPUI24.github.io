@@ -49,6 +49,9 @@
             pointer-events: none; /* Make sure the overlay does not interfere with map interactions */
             z-index: 50;
         }
+        area {
+            outline-color: white;
+        }
     </style>
 </head>
 <body>
@@ -58,17 +61,16 @@
     <main>
         <h2>Map of Japan</h2>
         <div class="map-container" style="position: relative; border: solid;">
-            <img src="Map of Japan.png" alt="Map of Japan" usemap="#JapanMap">
-            <div id="tokyo-overlay" class="area-overlay" style="left: calc(609px - 10px); top: calc(637px - 10px); width: calc(2px * 10px); height: calc(2px * 10px);"></div>
-            <div id="osaka-overlay" class="area-overlay" style="left: calc(1px); top: calc(1px); width: calc(1px); height: calc(1px);"></div>
+            <img id="img" src="Map of Japan.jpeg" alt="Map of Japan" usemap="#JapanMap">
         </div>
         <div id="tokyo-popup" class="popup">Tokyo: Capital of Japan</div>
         <div id="osaka-popup" class="popup">Osaka: Major commercial center</div>
 
         <map name="JapanMap">
-            <area shape="circle" coords="609,637,10" alt="Tokyo" data-popup="tokyo-popup">
+            <area shape="circle" coords="473,495,10" alt="Tokyo" data-popup="tokyo-popup">
             <area shape="circle" coords="1,1,1" alt="Osaka" data-popup="osaka-popup">
         </map>
+        <p id="coords"></p>
         <p>Map data © OpenStreetMap contributors.</p>
     </main>
     <footer>
@@ -98,6 +100,15 @@
                 document.getElementById(overlayId).style.pointerEvents = 'none';
             });
         });
+
+        var img = document.getElementById('img');
+var coords = document.getElementById('coords');
+img.addEventListener('mousemove', function(event){
+
+  coords.innerHTML = "x: " + event.offsetX + "<br/>y: " + event.offsetY;
+});
+
+
     </script>
 </body>
 </html>
