@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Japan Map Project</title>
-    <link rel="stylesheet" href="styles/index.css">
+main
 </head>
 <body>
     <header>
@@ -16,14 +16,61 @@
             <img id="img" src="Map of Japan.jpeg" alt="Map of Japan" usemap="#JapanMap">
         </div>
         <div id="tokyo-popup" class="popup">Tokyo: Capital of Japan</div>
-        <div id="osaka-popup" class="popup">Osaka: Major commercial center</div>
+        <div id="kyoto-popup" class="popup">Kyoto: Famous for its classical temples.</div>
+        <div id="hiroshima-popup" class="popup">Hiroshima: Known for the atomic bomb dropped on the city in 1945.</div>
+        <div id="nagasaki-popup" class="popup">Nagasaki: Known for its history as an open port city and the second atomic bombing in 1945.</div>
 
         <map name="JapanMap">
-            <area shape="circle" coords="473,495,10" alt="Tokyo" data-popup="tokyo-popup">
-            <area shape="circle" coords="1,1,1" alt="Osaka" data-popup="osaka-popup">
+            <area shape="circle" coords="473,495,10" alt="Tokyo" data-popup="tokyo-popup" href="#location1">
+            <area shape="circle" coords="316,528,10" alt="Kyoto" data-popup="kyoto-popup" href="#location2">
+            <area shape="circle" coords="182,547,10" alt="Hiroshima" data-popup="hiroshima-popup" href="#location3">
+            <area shape="circle" coords="75,619,10" alt="Nagasaki" data-popup="nagasaki-popup" href="#location4">
         </map>
         <p id="coords"></p>
-        <p>Map data © OpenStreetMap contributors.</p>
+        <h2 id="location1">Tokyo</h2>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <h2 id="location2">Kyoto</h2>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <h2 id="location3">Hiroshima</h2>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <h2 id="location4">Nagasaki</h2>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
     </main>
     <footer>
         <p>&copy; 2024 Japan Map Project. All rights reserved.</p>
@@ -33,8 +80,11 @@
             area.addEventListener('mouseover', event => {
                 const popupId = area.getAttribute('data-popup');
                 const popup = document.getElementById(popupId);
-                popup.style.left = `${event.pageX + 10}px`;
-                popup.style.top = `${event.pageY + 10}px`;
+                const offsetX = 10; // Offset to the right
+                const offsetY = -50; // Offset above the cursor
+
+                popup.style.left = `${event.pageX + offsetX}px`;
+                popup.style.top = `${event.pageY + offsetY}px`;
                 popup.style.display = 'block';
 
                 // Highlight corresponding overlay
@@ -54,11 +104,10 @@
         });
 
         var img = document.getElementById('img');
-var coords = document.getElementById('coords');
-img.addEventListener('mousemove', function(event){
-
-  coords.innerHTML = "x: " + event.offsetX + "<br/>y: " + event.offsetY;
-});
+        var coords = document.getElementById('coords');
+        img.addEventListener('mousemove', function(event){
+            coords.innerHTML = "x: " + event.offsetX + "<br/>y: " + event.offsetY;
+        });
 
 
     </script>
