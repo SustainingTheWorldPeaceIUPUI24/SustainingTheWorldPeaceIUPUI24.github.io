@@ -70,6 +70,7 @@ video{
    height:240; 
 }
 
+/* normal text css*/
 p{
     text-align: center;
 }
@@ -80,4 +81,23 @@ h2{
     padding: 10px 0;
     width: 100%;
     text-align: center;
+}
+
+/*gallery css*/
+.gallery{
+    display:inline-block;
+    border: 2px solid rgb(133, 63, 63);
+    margin: 10px;
+    width:300px;
+}
+.gallery .descripton{
+    padding: 10px;
+    text-align: center;
+}
+.gallery .hover{
+    border:2px solid red;
+}
+.gallery img{
+    width:100%;
+    height:auto;
 }
