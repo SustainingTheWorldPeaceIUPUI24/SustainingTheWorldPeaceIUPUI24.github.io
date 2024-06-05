@@ -4,3 +4,7 @@ separated the css and created the log doc.
 i create a template page so that i can see what the css looks like 
 added folders for orgization, seperated the css for index page and template pages. 
 
+aothor: maria colon 
+date: 6/3/24 
+added the kyoto and tokyo tags, next i will work on importing all pictres taken into the system.
+created the gallery form the pictures in tokyo, and uploaed the video form the resturant, just needs descriptions 
