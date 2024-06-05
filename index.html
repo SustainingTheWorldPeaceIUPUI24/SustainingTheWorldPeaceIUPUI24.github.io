@@ -3,38 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Japan Map Project</title>
+    <title>Sustaining the World Peace IUPUI 2024</title>
     <link rel="stylesheet" href="styles/index.css">
 </head>
 <body>
     <header>
-        <h1>Japan Map Project</h1>
+        <h1>Sustaining the World Peace IUPUI 2024</h1>
+        <h2>Honoring the fallen and promoting peace</h2>
     </header>
     <main>
-        <h2>Map of Japan</h2>
-        <div class="map-container" style="position: relative; border: solid;">
-            <img id="img" src="Map of Japan.jpeg" alt="Map of Japan" usemap="#JapanMap">
-        </div>
-        <div id="tokyo-popup" class="popup">Tokyo: Capital of Japan</div>
-        <div id="osaka-popup" class="popup">Osaka: Major commercial center</div>
+        <div id="desktop-map">
+            <h2>Map of Japan</h2>
+            <h3>Use your cursor to hover over a city and read about our stories</h3>
+            <div class="map-container" style="position: relative; border: solid;">
+                <img id="img" src="Map of Japan.jpeg" alt="Map of Japan" usemap="#japan-map">
+            </div>
+            <div id="tokyo-popup" class="popup">Tokyo</div>
+            <div id="kyoto-popup" class="popup">Kyoto</div>
+            <div id="hiroshima-popup" class="popup">Hiroshima</div>
+            <div id="nagasaki-popup" class="popup">Nagasaki</div>
 
-        <map name="JapanMap">
-            <area shape="circle" coords="473,495,10" alt="Tokyo" data-popup="tokyo-popup">
-            <area shape="circle" coords="1,1,1" alt="Osaka" data-popup="osaka-popup">
-        </map>
-        <p id="coords"></p>
-        <p>Map data © OpenStreetMap contributors.</p>
+            <map name="japan-map">
+                <area shape="circle" coords="473,495,10" alt="Tokyo" data-popup="tokyo-popup">
+                <area shape="circle" coords="317,526,10" alt="Kyoto" data-popup="kyoto-popup">
+                <area shape="circle" coords="181,547,10" alt="Hiroshima" data-popup="hiroshima-popup">
+                <area shape="circle" coords="76,621,10" alt="Nagasaki" data-popup="nagasaki-popup">
+            </map>
+        </div>
+        <ul id="mobile-list">
+            <li>Tokyo</li>
+            <li>Kyoto</li>
+            <li>Hiroshima</li>
+            <li>Nagasaki</li>
+        </ul>
     </main>
     <footer>
-        <p>&copy; 2024 Japan Map Project. All rights reserved.</p>
+        <p>This website is for educational purposes only.</p>
     </footer>
     <script>
         document.querySelectorAll('area').forEach(area => {
             area.addEventListener('mouseover', event => {
                 const popupId = area.getAttribute('data-popup');
                 const popup = document.getElementById(popupId);
-                popup.style.left = `${event.pageX + 10}px`;
-                popup.style.top = `${event.pageY + 10}px`;
+                popup.style.left = `${event.x - 350}px`;
+                popup.style.top = `${event.y + 130}px`;
                 popup.style.display = 'block';
 
                 // Highlight corresponding overlay
@@ -52,15 +64,6 @@
                 document.getElementById(overlayId).style.pointerEvents = 'none';
             });
         });
-
-        var img = document.getElementById('img');
-var coords = document.getElementById('coords');
-img.addEventListener('mousemove', function(event){
-
-  coords.innerHTML = "x: " + event.offsetX + "<br/>y: " + event.offsetY;
-});
-
-
     </script>
 </body>
 </html>
