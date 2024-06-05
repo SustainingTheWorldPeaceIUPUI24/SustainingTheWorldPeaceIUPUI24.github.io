@@ -30,12 +30,14 @@
                 <area shape="circle" coords="76,621,10" alt="Nagasaki" data-popup="nagasaki-popup">
             </map>
         </div>
-        <ul id="mobile-list">
-            <li>Tokyo</li>
-            <li>Kyoto</li>
-            <li>Hiroshima</li>
-            <li>Nagasaki</li>
-        </ul>
+        <div>
+            <ul id="mobile-list">
+                <li>Tokyo</li>
+                <li>Kyoto</li>
+                <li>Hiroshima</li>
+                <li>Nagasaki</li>
+            </ul>
+        </div>
     </main>
     <footer>
         <p>This website is for educational purposes only.</p>
@@ -49,9 +51,6 @@
                 popup.style.top = `${event.y + 130}px`;
                 popup.style.display = 'block';
 
-                // Highlight corresponding overlay
-                const overlayId = `${popupId.split('-')[0]}-overlay`;
-                document.getElementById(overlayId).style.pointerEvents = 'auto';
             });
 
             area.addEventListener('mouseout', () => {
@@ -59,9 +58,6 @@
                 const popup = document.getElementById(popupId);
                 popup.style.display = 'none';
 
-                // Remove highlight from corresponding overlay
-                const overlayId = `${popupId.split('-')[0]}-overlay`;
-                document.getElementById(overlayId).style.pointerEvents = 'none';
             });
         });
     </script>

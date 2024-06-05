@@ -8,3 +8,7 @@ aothor: maria colon
 date: 6/3/24 
 added the kyoto and tokyo tags, next i will work on importing all pictres taken into the system.
 created the gallery form the pictures in tokyo, and uploaed the video form the resturant, just needs descriptions 
+
+Author: Steven Casada
+Date :06/05/2024
+Added media querries to the css and edited some id naming. I'd like to make it so the map is gone on mobile.
