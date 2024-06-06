@@ -7,7 +7,7 @@ ul{
     overflow: hidden;
     top:0;
     width: 100%;
-    background-color: #4846c4;
+    background-color: #080047;
     list-style: none;
 }
 li{
@@ -21,22 +21,20 @@ li a{
     text-decoration:none;
 }
 li a:hover {
-    background-color: #2730b6;
+    background-color: #060437;
 }
 .active{
-    background-color: #9795ff;
+    background-color: #422b82;
 }
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
     align-items: center;
     background-color: #f8f9fa;
 }
 header {
-    background-color: #4f3a94;
+    background-color: #343a40;
     color: #ffffff;
     padding: 10px 0;
     width: 100%;
@@ -56,7 +54,7 @@ img {
 .area-overlay {
     position: absolute;
     border: 2px solid rgb(0, 102, 255);
-    background-color: rgba(12, 36, 85, 0.3);
+    background-color: rgba(255, 0, 0, 0.3);
     border-radius: 50%;
     pointer-events: none; /* Make sure the overlay does not interfere with map interactions */
     z-index: 50;
@@ -66,6 +64,8 @@ area {
 }
 
 video{
+   display: block;
+   margin: auto;
    width:320;
    height:240; 
 }
@@ -76,7 +76,7 @@ p{
 }
 
 h2{
-    background-color: #3a9459;
+    background-color: #2c7846;
     color: #ffffff;
     padding: 10px 0;
     width: 100%;
@@ -89,11 +89,11 @@ h2{
     border: 1px solid hsl(207, 87%, 56%);
     margin: 5px;
     width: 500px;
-    text-align: center;
 }
 .gallery .description{
     padding: 10px;
     text-align: center;
+    color:#ffffff;
 }
 .gallery:hover{
     border: 1px solid hsl(206, 70%, 53%);
@@ -102,3 +102,10 @@ h2{
     width: 100%;
     height: auto;
 }
+div.scroll-container {
+    background-color: #333;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px;
+  }
+  
