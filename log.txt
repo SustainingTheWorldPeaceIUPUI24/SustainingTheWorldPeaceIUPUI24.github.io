@@ -10,5 +10,13 @@ added the kyoto and tokyo tags, next i will work on importing all pictres taken 
 created the gallery form the pictures in tokyo, and uploaed the video form the resturant, just needs descriptions 
 
 Author: Steven Casada
-Date :06/05/2024
+Date: 06/05/2024
 Added media querries to the css and edited some id naming. I'd like to make it so the map is gone on mobile.
+
+Author: Steven Casada
+Date: 06/08/2024
+Finished? Main page, renamed files to better aline with purpose.
+Edited nav css to be more specific
+Added mobile support to home page
+Changed title
+Added Hiroshima page

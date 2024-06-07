@@ -45,20 +45,17 @@ img {
 area {
     outline-color: white;
 }
-@media (width <= 800px) {
-    #desktop-map {
-        display: none;
-    }
+#mobile-list, #desktop-map {
+    display: none;
+}
+@media (max-width: 800px) {
     #mobile-list {
-        display: auto;
+        display: block;
     }
     
 }
-@media (width > 800) {
+@media (min-width: 801px) {
     #desktop-map {
-        display: auto;
-    }
-    #mobile-list {
-        display: none !important;
+        display: block;
     }
 }
