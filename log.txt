@@ -13,6 +13,12 @@ Author: Steven Casada
 Date: 06/05/2024
 Added media querries to the css and edited some id naming. I'd like to make it so the map is gone on mobile.
 
+
+author:maria colon 
+date:6/6/24
+added more pictres to kyoto and will try to update the way the gallery works, and will update some of the text.
+i also added Hiroshima to the web pages still wating on descriptions i will try to get them soon or just put in place holders. 
+
 Author: Steven Casada
 Date: 06/08/2024
 Finished? Main page, renamed files to better aline with purpose.
