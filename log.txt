@@ -26,3 +26,4 @@ Edited nav css to be more specific
 Added mobile support to home page
 Changed title
 Added Hiroshima page
+Merged changes

@@ -26,7 +26,7 @@
     text-decoration:none;
 }
 .nav-button, .back-button {
-    background-color: #2730b6;
+    background-color: #080047;
 }
 .nav-button:hover, .back-button:hover {
     background-color: #060437;
@@ -54,6 +54,7 @@ main {
     width: 100%;
     text-align: center;
     position: relative;
+    margin: 0px auto;
 }
 img {
     max-width: 100%;
@@ -115,6 +116,9 @@ h2{
     display: none;
 } 
 .mobile-button {
+    
+}
+.mobile-button a {
     list-style-type: none;
     max-width: 600px;
     border: none;
@@ -123,9 +127,7 @@ h2{
     cursor: pointer;
     width: 100%;
     padding: 10px 20px;
-    background-color: #4846c4;
-}
-.mobile-button a {
+    background-color: #080047;
     font-size: 18px;
     font-weight: bold;
     transition: background-color 0.3s, transform 0.2s;
@@ -133,6 +135,9 @@ h2{
     color: white;
     text-align: center;
     text-decoration: none;
+}
+.mobile-button a:hover {
+    background-color: #422b82;
 }
 @media (max-width: 800px) {
     #mobile-list {
@@ -144,11 +149,15 @@ h2{
     #desktop-map {
         display: block;
     }
+    div.scroll-container {
+        display: block;
+    }
 }
 div.scroll-container {
     background-color: #333;
     overflow: auto;
     white-space: nowrap;
     padding: 10px;
+    display: none;
   }
   
