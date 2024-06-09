@@ -27,3 +27,7 @@ Added mobile support to home page
 Changed title
 Added Hiroshima page
 Merged changes
+
+Author: Steven Casada
+Date: 06/09/2024
+Worked on filling out Tokyo and Kyotos pages. Cleared Nagasaki and Hiroshima for now.
