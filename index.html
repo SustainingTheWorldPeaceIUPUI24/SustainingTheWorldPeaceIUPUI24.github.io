@@ -60,8 +60,8 @@
                 const [x, y, radius] = coords;
 
                 // Position the popup based on the coordinates of the area
-                popup.style.left = `${x}px`; // Adjust for the radius of the circle
-                popup.style.top = `${y}px`; // Adjust for the radius of the circle
+                popup.style.left = `${event.x + 40}px`; // Adjust for the radius of the circle
+                popup.style.top = `${event.y + 80}px`; // Adjust for the radius of the circle
                 popup.style.display = 'block';
 
             });
