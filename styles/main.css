@@ -101,6 +101,22 @@ nav {
     display: none;
     z-index: 100;
 }
+#icon-container div {
+    width: 160px;
+    display: inline-block;
+    margin: 0px 20px;
+}
+#icon-container div img {
+    display: inline-block;
+    width: 160px;
+    border: #080047 4px solid;
+}
+#icon-container div img:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+#icon-container div label {
+    text-align: center;
+}
 
 /* Main content */
 header {

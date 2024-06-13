@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sustaining the World Peace</title>
     <link rel="stylesheet" href="styles/main.css">
 </head>
+
 <body>
     <header>
         <h1>
@@ -22,13 +24,16 @@
             <h3>Use your cursor to hover over a city and read about our stories</h3>
 
             <div class="map-container">
-                <img id="img" src="Map of Japan.jpeg" alt="Map of Japan" usemap="#japan-map" style="position: relative; border: solid; border-color: black; width: 800px;">
+                <img id="img" src="Map of Japan.jpeg" alt="Map of Japan" usemap="#japan-map"
+                    style="position: relative; border: solid; border-color: black; width: 800px;">
 
                 <map name="japan-map" style="width:800px;">
                     <area shape="circle" coords="473,495,10" alt="Tokyo" data-popup="tokyo-popup" href="tokyo.html">
                     <area shape="circle" coords="317,526,10" alt="Kyoto" data-popup="kyoto-popup" href="kyoto.html">
-                    <area shape="circle" coords="181,547,10" alt="Hiroshima" data-popup="hiroshima-popup" href="hiroshima.html">
-                    <area shape="circle" coords="76,621,10" alt="Nagasaki" data-popup="nagasaki-popup" href="nagasaki.html">
+                    <area shape="circle" coords="181,547,10" alt="Hiroshima" data-popup="hiroshima-popup"
+                        href="hiroshima.html">
+                    <area shape="circle" coords="76,621,10" alt="Nagasaki" data-popup="nagasaki-popup"
+                        href="nagasaki.html">
                 </map>
 
                 <div id="tokyo-popup" class="popup">Tokyo</div>
@@ -40,10 +45,31 @@
         </div>
         <div id="mobile-list">
             <h3> Select one of the cities below to read about our work there</h3>
-                <a class="mobile-button" href="tokyo.html">Tokyo</a>
-                <a class="mobile-button" href="kyoto.html">Kyoto</a>
-                <a class="mobile-button" href="hiroshima.html">Hiroshima</a>
-                <a class="mobile-button" href="nagasaki.html">Nagasaki</a>
+            <a class="mobile-button" href="tokyo.html">Tokyo</a>
+            <a class="mobile-button" href="kyoto.html">Kyoto</a>
+            <a class="mobile-button" href="hiroshima.html">Hiroshima</a>
+            <a class="mobile-button" href="nagasaki.html">Nagasaki</a>
+        </div>
+
+        <div id="icon-container">
+            <div>
+                <a target="_blank" href="pictures.html">
+                    <img id="camera" src="camera.png" href="pictures.html">
+                </a>
+                <label for="camera">Photos</label>
+            </div>
+            <div>
+                <a target="_blank" href="paintings.html">
+                    <img id="painting" src="paint.png" href="paintings.html">
+                </a>
+                <label for="painting">Art</label>
+            </div>
+            <div>
+                <a target="_blank" href="guernica.html">
+                <img id="banner" src="banner.png" href="banner.png">
+            </a>
+                <label for="banner">Kid's Guernica</label>
+            </div>
         </div>
     </main>
     <footer>
@@ -54,14 +80,14 @@
             area.addEventListener('mouseover', event => {
                 const popupId = area.getAttribute('data-popup');
                 const popup = document.getElementById(popupId);
-                
+
                 // Get the coordinates of the area
                 const coords = area.coords.split(',').map(coord => parseInt(coord));
                 const [x, y, radius] = coords;
 
                 // Position the popup based on the coordinates of the area
-                popup.style.left = `${event.x + 40}px`; // Adjust for the radius of the circle
-                popup.style.top = `${event.y + 80}px`; // Adjust for the radius of the circle
+                popup.style.left = `${event.x}px`; // Adjust for the radius of the circle
+                popup.style.top = `${event.y}px`; // Adjust for the radius of the circle
                 popup.style.display = 'block';
 
             });
@@ -75,4 +101,5 @@
         });
     </script>
 </body>
+
 </html>
