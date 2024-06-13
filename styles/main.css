@@ -1,183 +1,240 @@
-
-/* navigarion bar css */
-.nav-container{
-    position:sticky;
-    margin: 0px;
-    margin-bottom: 20px;
-    padding: 0;
-    overflow: hidden;
-    top:0;
-    width: 100%;
-    background-color: #080047;
-    list-style: none;
-}
-.nav-button, .active {
-    float: right;
-}
-.back-button {
-    float: left;
-}
-.nav-button, .back-button, .active{
-    text-align: center;
-    padding: 14px 16px;
-    border: none;
-    cursor: pointer;
-    display:block;
-    color:white;
-    text-decoration:none;
-}
-.nav-button, .back-button {
-    background-color: #080047;
-}
-.nav-button:hover, .back-button:hover {
-    background-color: #060437;
-}
-.active{
-    background-color: #422b82;
-}
-body {
-    font-family: Arial, sans-serif;
+/* Reset and global styles */
+html, body {
+    overflow-x: hidden;
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    position: relative;
     align-items: center;
     background-color: #f8f9fa;
 }
+
+/* Header */
 header {
     background-color: #343a40;
     color: #ffffff;
-    padding: 10px 0;
+    padding-top: 10px;
     width: 100%;
     text-align: center;
 }
- .main-page {
-    padding: 20px;
-    max-width: 800px;
+
+/* Navigation bar */
+nav {
+    background-color: #080047;
+    height: 46.4px;
+}
+
+.nav-container {
+    padding: 0;
+    margin: 0;
+    text-align: right;
+    overflow-x: auto;
+    white-space: nowrap;
+    height: 46.4px;
+}
+
+.back-button {
+    float: left;
+    background-color: #080047;
+    color: white;
+    padding: 14px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.vert-line {
+    border-right: 3px solid gray;
+    height: 46.4px;
+    float: left;
+}
+
+.nav-button, .back-button, .active {
+    text-align: center;
+    padding: 14px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.nav-button, .back-button {
+    background-color: #080047;
+}
+
+.nav-button:hover, .back-button:hover {
+    background-color: #060437;
+}
+
+.active {
+    background-color: #422b82;
+}
+.mobile-button {
+    display: block;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 14px 16px;
+    background-color: #080047;
+    transition: background-color 0.3s, transform 0.2s;
+}
+.mobile-button a {
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.mobile-button a:hover {
+    
+}
+/* Main content */
+header {
+    word-wrap: break-word;
+}
+header h1 {
+    font-size: 20px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+header h2 {
+    font-size: 18px;
+    width: inherit;
+    background-color: inherit;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+header h3 {
+    margin: 0px;
+    padding: 0px;
+}
+main {
     width: 100%;
     text-align: center;
     position: relative;
-    margin: 0px auto;
+    margin: 0 auto;
 }
+
 img {
     max-width: 100%;
     height: auto;
 }
-area {
-    outline-color: white;
+h1 {
+    font-size: 22px;
 }
-
-video{
-   display: block;
-   margin: auto; 
-}
-h3 {
-    text-align: center;
-}
-
-/* normal text css*/
-p{
-    text-align: left;
-}
-footer p {
-    text-align: center;
-}
-h2{
+h2 {
+    font-size: 18px;
     background-color: #2c7846;
     color: #ffffff;
     padding: 10px 0;
     width: 100%;
     text-align: center;
 }
+h3 {
+    font-size: 16px;
+    text-align: center;
+}
 p {
     width: 80%;
     margin: 5px auto;
+    font-size: 16px;
 }
-/*gallery css*/
-.gallery{
-    display:inline-block;
-    border: 1px solid hsl(207, 87%, 56%);
-    margin: 5px;
-    background-color: #333;
-    
-}
-.gallery .description{
-    padding: 10px;
-    text-align: center;
-    color:#ffffff;
-}
-.gallery:hover{
-    border: 1px solid hsl(206, 70%, 53%);
-}
-.gallery img{
-    max-height: 500px;
-    width: auto;
-    
-}
-.gallery a {
-    justify-content: center;
-    display: flex;
-}
-.popup {
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: #ffffff;
-    padding: 10px;
-    border-radius: 5px;
-    display: none;
-    z-index: 100;
-}
-#mobile-list, #desktop-map {
-    display: none;
-} 
-.mobile-button a {
-    list-style-type: none;
-    max-width: 600px;
-    border: none;
-     margin: 5px auto;
-    padding: 15px 30px;
-    cursor: pointer;
-    width: 100%;
-    padding: 10px 20px;
-    background-color: #080047;
-    font-size: 18px;
-    font-weight: bold;
-    transition: background-color 0.3s, transform 0.2s;
-    display: block;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-}
-.mobile-button a:hover {
-    background-color: #422b82;
-}
-div .scroll-container {
+
+/* Gallery */
+.scroll-container {
     background-color: #333;
     overflow: auto;
     white-space: nowrap;
     padding: 10px;
+}
+
+.gallery {
+    display: inline-block;
+    border: 1px solid hsl(207, 87%, 56%);
+    margin: 5px;
+    background-color: #333;
+}
+
+.gallery .description {
+    padding: 10px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.gallery:hover {
+    border: 1px solid hsl(206, 70%, 53%);
+}
+
+.gallery img {
+    max-height: 200px;
+    width: auto;
+}
+
+.gallery a {
+    justify-content: center;
+    display: flex;
+}
+
+/* Footer */
+footer p {
+    text-align: center;
+}
+
+/* Responsive styles */
+#mobile-list, #desktop-map {
     display: none;
-  }
+    width: 90%;
+    margin: auto;
+}
 @media (max-width: 800px) {
     #mobile-list {
         display: block;
     }
+
     main {
         max-width: 800px;
         width: 100%;
         text-align: center;
         position: relative;
-        margin: 0px auto;
+        margin: 0 auto;
     }
-    
 }
+
 @media (min-width: 801px) {
     #desktop-map {
         display: block;
     }
+
     .scroll-container {
         background-color: #333;
         overflow: auto;
         white-space: nowrap;
         padding: 10px;
-      }
+    }
+
+    .gallery img {
+        max-height: 500px;
+    }
+    h1 {
+        font-size: 36px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    h3 {
+        font-size: 18px;
+    }
+    header h1 {
+        font-size: 36px;
+    }
+    header h2 {
+        font-size: 24px;
+    }
+    p {
+        line-height: 1.8;
+    }
 }
-  
