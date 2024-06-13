@@ -82,16 +82,26 @@ nav {
     padding: 14px 16px;
     background-color: #080047;
     transition: background-color 0.3s, transform 0.2s;
-}
-.mobile-button a {
+    width: auto;
     font-size: 16px;
     color: white;
     text-decoration: none;
     font-weight: bold;
 }
-.mobile-button a:hover {
-    
+.mobile-button:hover {
+    background-color: #060437;
 }
+/* Map css */
+.popup {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+    z-index: 100;
+}
+
 /* Main content */
 header {
     word-wrap: break-word;
@@ -187,8 +197,6 @@ footer p {
 /* Responsive styles */
 #mobile-list, #desktop-map {
     display: none;
-    width: 90%;
-    margin: auto;
 }
 @media (max-width: 800px) {
     #mobile-list {
