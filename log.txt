@@ -39,3 +39,8 @@ worked on filling out nagasaki, and added some picters. i still have some things
 Author: Steven Casada
 Date: 06/11/2024
 Fixed some mobile graphical bugs. Added more text.
+
+
+Author: maria Colon 
+date: 6/14/24
+i added an astests folder so you can put all picters/ files that are uesd for cosemtics in there. i will aslo add the descriptions for hiroshima. 
