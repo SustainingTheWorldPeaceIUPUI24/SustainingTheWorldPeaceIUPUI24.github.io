@@ -235,7 +235,9 @@ footer p {
     #desktop-map {
         display: block;
     }
-
+    main {
+        text-align: left;
+    }
     .scroll-container {
         background-color: #333;
         overflow: auto;
