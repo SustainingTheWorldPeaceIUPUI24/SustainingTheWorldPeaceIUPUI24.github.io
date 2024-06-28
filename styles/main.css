@@ -1,4 +1,16 @@
 /* Reset and global styles */
+:root {
+    --header-color: #5DADE2;
+    --nav-color: #74A151;
+    --nav-active: #88b267;
+    --nav-hover: #618744;
+    --hover-text: #f8fbf6;
+    --h2-color: #264348;
+    --h3-color: #264348;
+    --background-color: #FDFEFE;
+    --main-text: #264348;
+}
+
 html, body {
     overflow-x: hidden;
     margin: 0;
@@ -9,21 +21,46 @@ html, body {
 body {
     position: relative;
     align-items: center;
-    background-color: #f8f9fa;
+    background-color: var(--background-color);
 }
 
 /* Header */
 header {
-    background-color: #343a40;
-    color: #ffffff;
-    padding-top: 10px;
-    width: 100%;
     text-align: center;
 }
+.hero {
+    background-image: url('/../header-bg.jpeg'); /* Replace with your hero image */
+    background-color: var(--header-color);
+    background-size: cover;
+    background-position: center;
+    height: 215px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
 
+}
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    color: #f5f5dc;
+    padding: 8px;
+}
+.hero-content div {
+    padding-bottom: 12px;
+    color: inherit;
+}
+.hero-content h1,  .hero-content h2{
+    color: inherit;
+    background-color: rgba(0, 0, 0, 0);
+    padding: initial;
+    margin: 0px;;
+}
 /* Navigation bar */
 nav {
-    background-color: #080047;
+    background-color: var(--nav-color);
     height: 46.4px;
 }
 
@@ -38,7 +75,7 @@ nav {
 
 .back-button {
     float: left;
-    background-color: #080047;
+    background-color: var(--nav-color);
     color: white;
     padding: 14px 16px;
     font-size: 16px;
@@ -47,7 +84,7 @@ nav {
 }
 
 .vert-line {
-    border-right: 3px solid gray;
+    border-right: 3px solid var(--nav-hover);
     height: 46.4px;
     float: left;
 }
@@ -63,15 +100,16 @@ nav {
 }
 
 .nav-button, .back-button {
-    background-color: #080047;
+    background-color: var(--nav-color);
 }
 
 .nav-button:hover, .back-button:hover {
-    background-color: #060437;
+    background-color: var(--nav-hover);
+    color: var(--hover-text);
 }
 
 .active {
-    background-color: #422b82;
+    background-color: var(--nav-active);
 }
 .mobile-button {
     display: block;
@@ -80,8 +118,7 @@ nav {
     margin-top: 5px;
     margin-bottom: 5px;
     padding: 14px 16px;
-    background-color: #080047;
-    transition: background-color 0.3s, transform 0.2s;
+    background-color: var(--nav-color);
     width: auto;
     font-size: 16px;
     color: white;
@@ -89,7 +126,8 @@ nav {
     font-weight: bold;
 }
 .mobile-button:hover {
-    background-color: #060437;
+    background-color: var(--nav-hover);
+    color: var(--hover-text);
 }
 /* Map css */
 .popup {
@@ -109,7 +147,7 @@ nav {
 #icon-container div img {
     display: inline-block;
     width: 160px;
-    border: #080047 4px solid;
+    border: var(--nav-color) 4px solid;
 }
 #icon-container div img:hover {
     background-color: rgba(0, 0, 0, 0.1);
@@ -124,19 +162,9 @@ header {
 }
 header h1 {
     font-size: 20px;
-    margin-bottom: 0px;
-    padding-bottom: 0px;
 }
 header h2 {
     font-size: 18px;
-    width: inherit;
-    background-color: inherit;
-    margin-top: 0px;
-    padding-top: 0px;
-}
-header h3 {
-    margin: 0px;
-    padding: 0px;
 }
 main {
     width: 100%;
@@ -154,7 +182,8 @@ h1 {
 }
 h2 {
     font-size: 18px;
-    background-color: #2c7846;
+    background-color: var(--h2-color);
+    margin-top: 0px;
     color: #ffffff;
     padding: 10px 0;
     width: 100%;
@@ -163,14 +192,16 @@ h2 {
 h3 {
     font-size: 16px;
     text-align: center;
+    color: var(--h3-color);
 }
 p:has(+h3) {
-    border-bottom: 2px solid #333;
+    border-bottom: 2px solid var(--main-text);
 }
 p {
     width: 80%;
     margin: 5px auto;
     font-size: 16px;
+    color: var(--main-text);
 }
 
 /* Gallery */
@@ -209,8 +240,15 @@ p {
 }
 
 /* Footer */
+footer {
+    padding: 8px;
+    margin: 0px;
+    background-color: var(--h2-color);
+    color: var(--background-color);
+}
 footer p {
     text-align: center;
+    color: inherit;
 }
 
 /* Responsive styles */
@@ -232,6 +270,9 @@ footer p {
 }
 
 @media (min-width: 801px) {
+    .hero {
+        background-position: left;
+    }
     #desktop-map {
         display: block;
     }
@@ -265,5 +306,6 @@ footer p {
     }
     p {
         line-height: 1.8;
+        color: var(--main-text);
     }
 }
