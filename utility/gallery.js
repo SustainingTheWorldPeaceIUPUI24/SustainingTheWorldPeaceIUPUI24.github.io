@@ -1,17 +1,29 @@
 document.addEventListener("DOMContentLoaded", function() {
-    var galleries = document.querySelectorAll(".gallery");
+    
+    // get all scroll containers in the file
+    const containers = document.querySelectorAll(".scroll-container");
 
-    // loop through gallery elements
-    galleries.forEach(function(gallery) {
-        // create file path
-        var imgSrc = gallery.getAttribute("data-img");
+    // iterate over the contaiers
+    containers.forEach(function(container) {
 
-        // get elements
-        var anchor = gallery.querySelector("a");
-        var img = gallery.querySelector("img");
+        // store that contaiers folder src
+        const folderSrc = container.getAttribute("data-folder");
 
-        // set href and src
-        anchor.href = imgSrc;
-        img.src = imgSrc;
+        // get all galleries under the contaier
+        const galleries = container.querySelectorAll(".gallery");
+
+        // loop through gallery elements
+        galleries.forEach(function(gallery) {
+            // create file path
+            const imgSrc = gallery.getAttribute("data-img");
+
+            // get elements
+            const anchor = gallery.querySelector("a");
+            const img = gallery.querySelector("img");
+
+            // set href and src
+            anchor.href = folderSrc + "/" + imgSrc;
+            img.src = folderSrc + "/" + imgSrc;
+        });
     });
 });
