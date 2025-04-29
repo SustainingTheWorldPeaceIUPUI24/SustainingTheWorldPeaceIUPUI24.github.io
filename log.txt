@@ -48,3 +48,7 @@ i added an astests folder so you can put all picters/ files that are uesd for co
 Author:maria colon 
 date:6/20/24
 i finished hiroshima, pictures and pantings. if i missed anything feel free to add it. this will be my last commit. it was nice wroking with you. have a nice summer.
+
+author:maria colon 
+dates:4/16-4/25
+just went thru and fixed a bunch of the broken pictures and suff, have not added descriptions or anything like that. 
